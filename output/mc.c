@@ -26,7 +26,7 @@
 
 #include "mc.h"
 
-int mv_code_table [33][2];		/* VLC table for coordinates, mwfa.c */
+int mv_code_table_mc [33][2];		/* VLC table for coordinates, mwfa.c */
 
 /*****************************************************************************
 
@@ -192,35 +192,35 @@ encode_mc_coords (unsigned max_state, const wfa_t *wfa, bitfile_t *output)
 	    {
 	       case FORWARD:
 		  put_bits (output,
-			    mv_code_table[(mv->fx + sr)][CODE],
-			    mv_code_table[(mv->fx + sr)][BITS]);
+			    mv_code_table_mc[(mv->fx + sr)][CODE],
+			    mv_code_table_mc[(mv->fx + sr)][BITS]);
 		  put_bits (output,
-			    mv_code_table[(mv->fy + sr)][CODE],
-			    mv_code_table[(mv->fy + sr)][BITS]);
+			    mv_code_table_mc[(mv->fy + sr)][CODE],
+			    mv_code_table_mc[(mv->fy + sr)][BITS]);
 		  ftotal++;
 		  break;
 	       case BACKWARD:
 		  put_bits (output,
-			    mv_code_table[(mv->bx + sr)][CODE],
-			    mv_code_table[(mv->bx + sr)][BITS]);
+			    mv_code_table_mc[(mv->bx + sr)][CODE],
+			    mv_code_table_mc[(mv->bx + sr)][BITS]);
 		  put_bits (output,
-			    mv_code_table[(mv->by + sr)][CODE],
-			    mv_code_table[(mv->by + sr)][BITS]);
+			    mv_code_table_mc[(mv->by + sr)][CODE],
+			    mv_code_table_mc[(mv->by + sr)][BITS]);
 		  btotal++;
 		  break;
 	       case INTERPOLATED:
 		  put_bits (output,
-			    mv_code_table[(mv->fx + sr)][CODE],
-			    mv_code_table[(mv->fx + sr)][BITS]);
+			    mv_code_table_mc[(mv->fx + sr)][CODE],
+			    mv_code_table_mc[(mv->fx + sr)][BITS]);
 		  put_bits (output,
-			    mv_code_table[(mv->fy + sr)][CODE],
-			    mv_code_table[(mv->fy + sr)][BITS]);
+			    mv_code_table_mc[(mv->fy + sr)][CODE],
+			    mv_code_table_mc[(mv->fy + sr)][BITS]);
 		  put_bits (output,
-			    mv_code_table[(mv->bx + sr)][CODE],
-			    mv_code_table[(mv->bx + sr)][BITS]);
+			    mv_code_table_mc[(mv->bx + sr)][CODE],
+			    mv_code_table_mc[(mv->bx + sr)][BITS]);
 		  put_bits (output,
-			    mv_code_table[(mv->by + sr)][CODE],
-			    mv_code_table[(mv->by + sr)][BITS]);
+			    mv_code_table_mc[(mv->by + sr)][CODE],
+			    mv_code_table_mc[(mv->by + sr)][BITS]);
 		  itotal++;
 		  break;
 	       default:
