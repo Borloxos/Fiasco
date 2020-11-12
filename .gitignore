@@ -36,3 +36,14 @@ output/Makefile
 output/libfiasco-output.la
 stamp-h
 stamp-h1
+Makefile.in
+aclocal.m4
+bin/Makefile.in
+codec/Makefile.in
+config.h.in
+configure
+data/Makefile.in
+doc/Makefile.in
+input/Makefile.in
+lib/Makefile.in
+output/Makefile.in
