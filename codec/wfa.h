@@ -18,9 +18,9 @@
 #define _WFA_H
 
 #define MAXEDGES  5
-#define MAXSTATES 6000
+#define MAXSTATES 30000
 #define MAXLABELS 2			/* only bintree supported anymore */
-#define MAXLEVEL  22 
+#define MAXLEVEL  27
 
 #define FIASCO_BINFILE_RELEASE   2
 #define FIASCO_MAGIC	         "FIASCO" /* FIASCO magic number */

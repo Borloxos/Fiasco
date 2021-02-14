@@ -1,0 +1,8 @@
+Build:
+    ./configure && make && sudo make install
+
+Build Debug:
+    ./configure CPPFLAGS=-DDEBUG CFLAGS="-g -O0" && make && sudo make install
+
+Build Windows:
+    ./configure --host=x86_64-w64-mingw32 && make && sudo make install

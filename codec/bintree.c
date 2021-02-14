@@ -81,10 +81,12 @@ init_tree_model (tree_t *tree_model)
    unsigned level;
    unsigned counts_0 [MAXLEVEL] = {20, 17, 15, 10, 5,  4,  3,
 				   2,  1,  1,  1,  1,  1,  1,  1,
-				   1,  1,  1,  1 , 1,  1,  1};
+				   1,  1,  1,  1 , 1,  1, 1,
+				   1,  1,  1,  1,  1};
    unsigned counts_1 [MAXLEVEL] = {1 , 1,  1,  1,  1,  1,  1,
 				   1,  1,  2,  3,  5,  10, 15, 20,
-				   25, 30, 35, 60, 60, 60, 60};
+				   25, 30, 35, 60, 60, 60, 60,
+				   60, 60, 60, 60, 60};
    
    for (level = 0; level < MAXLEVEL ; level++) 
    {
